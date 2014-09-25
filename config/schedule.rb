@@ -18,6 +18,30 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
-every 1.day, :at => '4:30 am' do
+# every 1.day, :at => '9:30 am' do
+#   rake "seed"
+# end
+# set :environment, ENV['RAILS_ENV']
+# every 1.minute do
+#   rake "seed"#, :environment => 'staging'
+# end
+
+case @environment
+
+when 'production'
+
+every 1.minutes do
+
+   rake "seed"
+
+  end
+
+when 'development'
+
+every 1.minutes do
+
   rake "seed"
+
+  end
+
 end

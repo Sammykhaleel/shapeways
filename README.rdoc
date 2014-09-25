@@ -1,11 +1,19 @@
 == README
 
-Runing the application 
+IMPORTANT
+
+Runing the application for the first time.
+
+When installing the application in new machine we need to setup the application data base and the cron tasks to update the shaeways API.
 
 1.In the terminal run "git clone https://github.com/Sammykhaleel/shapeways" to get a copy of the application in your local machine.
 
-2.Run the command rake db:migrate to setup our data base.
+2.Run the command "rake db:migrate" to setup our data base.
 
-3.Type "rails s" in the terminal to lunch the server 
+3.To setup a task that's update & gather the data from shapeways API run "bundle exec whenever --set 'environment=development' -w" then "whenever --update-crontab appname --set 'environment=production&cron_log=/path/to/log'"
 
-4.In the browser go to the address http://localhost:3000/
+4.Type "rails s" in the terminal to lunch the server 
+
+5.In the browser go to the address http://localhost:3000/
+
+After that you only need to run "rails s" and lunch the local server (http://localhost:3000/).
