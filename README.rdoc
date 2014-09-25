@@ -17,3 +17,10 @@ When installing the application in new machine we need to setup the application 
 5.In the browser go to the address http://localhost:3000/
 
 After that you only need to run "rails s" and lunch the local server (http://localhost:3000/).
+
+Recourses 
+a. whenever gem: Whenever is a Ruby gem that provides a clear syntax for writing and deploying cron jobs.
+
+https://github.com/javan/whenever
+
+Best,
