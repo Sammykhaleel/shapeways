@@ -6,7 +6,7 @@ class HomesController < ApplicationController
   # GET /homes.json
   def index
     @homes = Home.all
-  render :json => @homes
+    render :json => @homes
   
   end
 
