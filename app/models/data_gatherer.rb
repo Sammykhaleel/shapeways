@@ -19,8 +19,11 @@ class DataGatherer
   end
 
   def run
+    Home.destroy_all
     fetch.each do |home|
       Home.create(title: home[:title], description: home[:description])
     end
   end
 end
+
+#Home.destroy_all
